@@ -1,0 +1,34 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Our Courses</h1>
+    <ul>
+        {% for course in courses %}
+        <h3>{{course.title}}</h3>
+        {% for student in course.students.all %}
+        <li>
+            Name: {{student.name}} |
+            Grade:
+            {% for i in student.coursestudent_set.all %}
+            <span>{{i.grade}}</span>
+            <span>{{i.fees}}</span>
+            {% endfor %}
+        </li>
+
+
+        {% endfor %}
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
+
+</html>

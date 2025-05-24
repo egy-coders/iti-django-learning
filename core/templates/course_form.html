@@ -1,0 +1,8 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Add Course</button>
+    <button>
+        <a href="{% url 'list' %}">Cancel</a>
+    </button>
+</form>
