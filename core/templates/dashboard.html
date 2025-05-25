@@ -1,11 +1,5 @@
-<h3>Dashboard</h3>
+{% extends 'base.html' %}
 
-<h4>Courses</h4>
-<ul>
-    
-    {% for course in courses %}
-    <li>{{course.title}}</li>
-    {% endfor %}
-</ul>
-<h4>Student</h4>
-<h4>Departments</h4>
+{% block content %}
+<h1>Dashboard</h1>
+{% endblock %}
